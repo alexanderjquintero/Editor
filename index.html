@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<title>editor</title>
+	<link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/codemirror.css">
+	<script src="js/codemirror.js"></script>
+	<script src="js/placeholder.js"></script>
+	<script src="js/xml.js"></script>
+	<script src="js/css.js"></script>
+	<script src="js/haml.js"></script>
+	<script src="js/markdown.js"></script>
+	<script src="js/jade.js"></script>
+	<script src="js/less.js"></script>
+	<script src="js/sass.js"></script>
+	<script src="js/javascript.js"></script>
+	<script src="js/htmlmixed.js"></script>
+	<script src="js/active-line.js"></script>
+	<script src="js/editor.js"></script>
+	<script src="js/emmet.js"></script>
+</head>
+<body>
+
+<div class="container grid" >
+	<form>
+		<h2>HTML</h2>
+		<textarea id="html" name="code" placeholder="Code goes here..." ></textarea>
+
+			<div class="linea"></div>
+		<h2>CSS</h2>
+		<textarea id="css" name="code" ></textarea>
+	</form>
+</div>
+<div class="output grid">
+	<iframe></iframe>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+<script src="http://localhost:35729/livereload.js"></script>
+
+<script>
+(function() {
+	$('.grid').height( $(window).height() );	
+
+	var	contents = $('iframe').contents(),
+		body = contents.find('body'),
+		styleTag = $('<style></style>').appendTo(contents.find('head'));
+
+	$('textarea').keyup(function() {
+		var $this = $(this);
+		if ( $this.attr('id') === 'html') {
+			body.html( $this.val() );
+		} else {
+			// it had to be css
+			styleTag.text( $this.val() );
+		}
+
+	});
+
+
+
+		var editor =CodeMirror.fromTextArea(document.getElementById('html'), {
+		mode : 'text/html',
+		mode: {name: 'jade', alignCDATA: true},
+		mode :'text/x-haml',
+		mode: 'markdown',
+		styleActiveLine: true,
+		lineNumbers: true,
+		lineWrapping: true,
+		profile: 'html' /* define Emmet output profile */
+
+	});
+
+		var editor =CodeMirror.fromTextArea(document.getElementById('css'), {
+		mode : 'text/css',		
+		mode: 'text/x-scss',
+		mode: 'text/x-less',
+		styleActiveLine: true,
+		lineNumbers: true,
+		lineWrapping: true,
+		profile: 'css' /* define Emmet output profile */
+
+	});
+	
+
+})();
+
+
+
+
+</script>
+
+
+</body>
+</html>
+
