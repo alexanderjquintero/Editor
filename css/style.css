@@ -5,24 +5,25 @@ body {
 }
 
 h1{
-  color: #C0C0C0;
+  color: #dcdcdc;
   font-size: 22px;
   margin: 0 0 10px 10px;
 }
 
 textarea{
+  display: block;
   background: #212121;
   border: 0px;
-  color: #FFFDFD;
+  color: #dcdcdc;
   font-family: monospace;
-  height: 294px;
+  height: 295px;
   outline:none;
-  padding: 5px 0 0 36px;
+  padding: 5px 0 0 35px;
   width: 100%;
 }
 
 textarea::-webkit-input-placeholder  {
- color: #fff; 
+ color: #dcdcdc; 
  }
 
 .container {
@@ -54,8 +55,8 @@ textarea::-webkit-input-placeholder  {
 }
 
 .linea{
-  border-top: 1px solid #4a4a4a;
-  box-shadow: 0px 0px 5px #fff;
-  margin-bottom: 10px;
-  width: 100%;
+  display: block;
+  margin-bottom: 12px;
+  width: 102%;
+  border-top: 5px solid #4a4a4a;
  }

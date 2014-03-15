@@ -2,9 +2,10 @@
 
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
-  font-family: monospace;
   color: #fff;
-  height: 285px;
+  font-family: monospace;
+  height: 300px;
+  width:  407px;
 }
 ::-webkit-scrollbar {
     width:8px;
@@ -128,7 +129,7 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   position: relative;
   overflow: hidden;
   background: #212121;
-  color: #fff;
+  color: #dcdcdc;
 }
 
 .CodeMirror-scroll {
