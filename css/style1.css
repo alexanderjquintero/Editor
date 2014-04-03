@@ -1,0 +1,54 @@
+body {
+  font-family: 'Share Tech Mono', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  color: #dcdcdc;
+  font-size: 22px;
+  margin: 0 0 10px 10px;
+}
+textarea {
+  display: block;
+  background: #212121;
+  border: 0px;
+  color: #dcdcdc;
+  font-family: monospace;
+  height: 295px;
+  outline: none;
+  padding: 5px 0 0 35px;
+  width: 100%;
+}
+textarea::-webkit-input-placeholder {
+  color: #dcdcdc;
+}
+.container {
+  background: #272822;
+  border-right: 0px solid #4a4a4a;
+}
+.grid {
+  width: 30%;
+  float: left;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 5px 10px 0px;
+}
+.output {
+  margin: 0px;
+  overflow: hidden;
+  padding: 0;
+  width: 70%;
+}
+.output iframe {
+  border: 0;
+  height: 100%;
+  width: 100%;
+}
+.linea {
+  display: block;
+  margin-bottom: 12px;
+  width: 102%;
+  border-top: 5px solid #4a4a4a;
+}
